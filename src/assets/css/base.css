@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 14px;
+    line-height: 1.2;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: var(--fw-base);
+}
+
+:root {
+    --bg-root: #6674BB;
+
+    --bg-primary: #E5EAFF;
+    --bg-secondary: rgb(55, 57, 63);
+    --bg-tertiary: rgb(40, 41, 50);
+
+    --hi-success: rgb(17, 201, 0);
+    --hi-warning: rgb(255, 147, 5);
+    --hi-danger: rgb(255, 0, 126);
+    --hi-primary: rgb(138, 149, 255);
+    --hi-secondary: rgb(90, 104, 242);
+
+    --fg-primary: rgb(233, 233, 233);
+    --fg-secondary: rgb(131, 133, 137);
+
+    --fw-sm: 400;
+    --fw-base: 500;
+    --fw-bold: 600;
+
+    --sp-base: 16px;
+
+    --bd-radius: 24px;
+}
+
+body {
+    background: var(--bg-root);
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+    min-width: 100vw;
+    overflow-x: hidden;
+    padding: var(--sp-base);
+
+    color: var(--fg-primary);
+}
+
+#app {
+    display: grid;
+    grid-template-columns: 200px repeat(auto-fit, minmax(400px,1fr)) minmax(0px,300px);
+    width: 1280px;
+    max-width: 1280px;
+    aspect-ratio: 1280 / 758;
+    overflow: hidden;
+    background-color: var(--bg-primary);
+    box-shadow: 0 4px 200px rgba(0, 0, 0, 0.25);
+}
+
+main {
+    padding: 2rem;
+    color: var(--bg-secondary);
+}
+.container {
+    margin-top: 4rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2rem;
+}
