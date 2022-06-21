@@ -20,14 +20,14 @@ html {
     --bg-secondary: rgb(55, 57, 63);
     --bg-tertiary: rgb(40, 41, 50);
 
-    --hi-success: rgb(17, 201, 0);
-    --hi-warning: rgb(255, 147, 5);
-    --hi-danger: rgb(255, 0, 126);
+    --hi-success: #57D9AD;;
+    --hi-warning: #FFBF00;;
+    --hi-danger: #FF784D;;
     --hi-primary: rgb(138, 149, 255);
     --hi-secondary: rgb(90, 104, 242);
 
-    --fg-primary: rgb(233, 233, 233);
-    --fg-secondary: rgb(131, 133, 137);
+    --fg-primary: #E5EAFF;
+    --fg-secondary: #6674BB;
 
     --fw-sm: 400;
     --fw-base: 500;
@@ -51,8 +51,9 @@ body {
 }
 
 #app {
+    position: relative;
     display: grid;
-    grid-template-columns: 200px repeat(auto-fit, minmax(400px,1fr)) minmax(0px,300px);
+    grid-template-columns: 200px max-content;
     width: 1280px;
     max-width: 1280px;
     aspect-ratio: 1280 / 758;
@@ -62,13 +63,14 @@ body {
 }
 
 main {
+    width: 1080px;
     padding: 2rem;
     color: var(--bg-secondary);
 }
 .container {
     margin-top: 4rem;
     width: 100%;
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
+    display: flex;
+    flex-wrap: wrap;
     gap: 2rem;
 }

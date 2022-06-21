@@ -12,17 +12,22 @@
     </div>
 
   </div>
-
+  <RightSidebar>
+    1234124124124
+  </RightSidebar>
 </template>
 
 <script>
 import SubjectCard from "@/components/SubjectCard";
+import RightSidebar from "@/components/RightSidebar";
 export default {
   name: "Subjects",
-  components: {SubjectCard}
+  components: {RightSidebar, SubjectCard}
 }
 </script>
 
 <style lang="scss">
-
+.subjects {
+  padding: 2rem;
+}
 </style>

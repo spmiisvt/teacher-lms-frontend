@@ -9,15 +9,17 @@
         <i class='bx bxs-arrow-from-left bx-md'></i>
       </div>
       <div class="content__inner">
-
+          <slot></slot>
       </div>
     </div>
   </nav>
 </template>
 
 <script>
+
 export default {
   name: "RightSidebar",
+  components: {},
   data() {
     return {
       isShowSidebar: false,
@@ -28,10 +30,13 @@ export default {
 
 <style lang="scss">
 .right__sidebar {
-  position: relative;
+  position: absolute;
   background: var(--bg-root);
+  top: 0;
+  right: 0;
   height: 100%;
-  width: 100%;
+  width: 300px;
+  z-index: 10;
   transform: translateX(100%);
   transition: .3s ease-in-out;
   &.active {
@@ -51,11 +56,13 @@ export default {
   align-items: center;
   justify-content: space-between;
   padding: 2rem;
+  color: var(--fg-primary);
   span {
     font-size: 1.2rem;
   }
 }
 .content__inner {
   padding: 1rem;
+  color: var(--fg-primary);
 }
 </style>
