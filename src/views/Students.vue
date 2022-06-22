@@ -1,14 +1,10 @@
 <template>
-  <div class="students">
-    <h1>Студенты</h1>
 
-    <div class="container">
-      <LmsTable
-        :users_data="students"
-        :headers="headers"
-      />
-    </div>
-  </div>
+  <LmsTable
+    :users_data="students"
+    :headers="headers"
+  />
+
   <RightSidebar>
     wefwfwefwe
   </RightSidebar>
@@ -112,9 +108,5 @@ export default {
 </script>
 
 <style lang="scss">
-.students {
-  padding: 2rem;
-}
-
 
 </style>

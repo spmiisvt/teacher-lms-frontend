@@ -1,5 +1,5 @@
 <template>
-  <h1>Аттестация</h1>
+
 </template>
 
 <script>

@@ -25,7 +25,7 @@
       </div>
 
       <div class="sidebar__menu--item" @click="$router.push({name: 'Presentation'})">
-        <i class='bx bx-share-alt bx-sm'></i><span>Трансляции</span>
+        <i class='bx bx-share-alt bx-sm'></i><span>Трансляция</span>
       </div>
 
       <div class="sidebar__menu--item" @click="$router.push({name: 'Files'})">

@@ -1,12 +1,7 @@
 <template>
-
-  <NavSidebar />
-  <main>
+  <AppLayout>
     <router-view/>
-  </main>
-
-
-
+  </AppLayout>
 </template>
 
 <style lang="scss">
@@ -14,9 +9,10 @@
 @import "assets/css/style.css";
 </style>
 <script>
-import NavSidebar from "@/components/NavSidebar";
+
+import AppLayout from "@/layouts/AppLayout";
 
 export default {
-  components: {NavSidebar}
+  components: {AppLayout}
 }
 </script>

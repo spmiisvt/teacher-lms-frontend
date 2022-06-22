@@ -1,5 +1,5 @@
 <template>
-  <h1>Посещаемость</h1>
+
 </template>
 
 <script>

@@ -1,8 +1,13 @@
 <template>
   <div class="subject__card">
-     <h3 class="subject__cart--title">
-       ЭВМ и Переферийные устройства
-     </h3>
+    <div class="subject__inner">
+      <h3 class="subject__cart--title">
+        {{subject.title}}
+      </h3>
+      <h2>Занятия: {{ subject.qnt_tasks }}</h2>
+    </div>
+
+
     <div class="control__items">
       <div>
         <i class='bx bx-sync bx-sm'></i>
@@ -23,14 +28,30 @@
 
 <script>
 export default {
-  name: "SubjectCard"
+  name: "SubjectCard",
+  props: {
+    subject: {
+      type: Object,
+      default: {}
+    }
+  }
 }
 </script>
 
 <style lang="scss">
+.subject__inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-basis: 80%;
+  h2 {
+    color: var(--hi-primary);
+    font-weight: 500;
+  }
+}
 .subject__card {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   background-color: white;
   width: 250px;
   height: 125px;

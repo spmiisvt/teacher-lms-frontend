@@ -1,20 +1,23 @@
 <template>
   <div class="lms-table">
-    <div class="lms-table__header">
-      <p v-for="header in headers"
-         :key="header"
-      >{{header}}</p>
+    <div class="table__content">
+      <div class="lms-table__header">
+        <p v-for="header in headers"
+           :key="header"
+        >{{header}}</p>
 
-    </div>
-    <div class="lms-table__body">
-      <div class="body-row">
-        <LmsTableRow
-          v-for="row in paginatedUsers"
-          :key="row.id"
-          :row_data="row"
-        />
+      </div>
+      <div class="lms-table__body">
+        <div class="body-row">
+          <LmsTableRow
+            v-for="row in paginatedUsers"
+            :key="row.id"
+            :row_data="row"
+          />
+        </div>
       </div>
     </div>
+
     <div class="lms-table__pagination">
       <div class="page"
         v-for="page in pages"
@@ -73,6 +76,10 @@ export default {
 <style lang="scss">
 .lms-table {
   width: 100%;
+  height: 590px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .lms-table__header {
   display: flex;
