@@ -1,6 +1,6 @@
 <template>
   <div class="form__group">
-    <button class="btn">Подтвердить</button>
+    <button class="btn"><slot></slot></button>
   </div>
 </template>
 
